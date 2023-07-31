@@ -19,9 +19,9 @@ class  RenderTipState extends State<RenderTip> {
   String tc='';
   String bc='';
   double cr=3;
-  int tw=3;
-  int aw=3;
-  int ah=3;
+  double tw=3;
+  double aw=3;
+  double ah=3;
   final _formKey = GlobalKey<FormState>();
   final colorr = const Color(0xFF0958D9);
   String _selectedValue='Button1';
@@ -43,7 +43,7 @@ class  RenderTipState extends State<RenderTip> {
             Navigator.push(
     context,
     MaterialPageRoute(
-      builder: (context) => Button(te:te,tt:tt,bc:bc, p:p, cr:cr, ts:ts, tw:tw, tc:tc),
+      builder: (context) => Button(te:te,tt:tt,bc:bc, p:p, cr:cr, ts:ts, tw:tw, tc:tc,aw:aw,ah:ah),
     ));
      }
   }
@@ -255,7 +255,7 @@ class  RenderTipState extends State<RenderTip> {
                   width: 234.66,
                   height: 32,
                   child: TextFormField(
-                    
+                    initialValue: '0xFFFFFFFF',
                     style: GoogleFonts.barlow(
                       fontWeight: FontWeight.w500,
                       fontSize:16
@@ -295,7 +295,7 @@ class  RenderTipState extends State<RenderTip> {
                   width: 234.66,
                   height: 32,
                   child: TextFormField(
-                    
+                     initialValue: '0xFF000000',
                     style: GoogleFonts.barlow(
                       fontWeight: FontWeight.w500,
                       fontSize:16
@@ -387,7 +387,7 @@ class  RenderTipState extends State<RenderTip> {
                         return null;
                       },
                       onSaved: (value) {
-                      tw=int.parse(value!);
+                      tw=double.parse(value!);
                     },
                       initialValue:'3',
                       decoration: InputDecoration(
@@ -430,7 +430,7 @@ class  RenderTipState extends State<RenderTip> {
                         return null;
                       },
                       onSaved: (value) {
-                      aw=int.parse(value!);
+                      aw=double.parse(value!);
                     },
                       initialValue:'3',
                       decoration: InputDecoration(
@@ -472,7 +472,7 @@ class  RenderTipState extends State<RenderTip> {
                       },
                         initialValue:'3',
                        onSaved: (value) {
-                      ah=int.parse(value!);
+                      ah=double.parse(value!);
                     },
                       decoration: InputDecoration(
                         fillColor: Colors.white,

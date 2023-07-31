@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
+import 'package:tooltip/models/TooltipWithArrow.dart';
 
 class Button extends StatelessWidget {
   final String te;
@@ -7,9 +8,11 @@ class Button extends StatelessWidget {
   final double p;
   final String tc;
   final String bc;
-  final int tw;
+  final double tw;
   final double cr;
   final String tt;
+  final double aw;
+  final double ah;
  
   const Button({super.key,required this.te,
  required this.tt,
@@ -19,14 +22,16 @@ class Button extends StatelessWidget {
   required this.bc,
   required this.cr,
   required this.tw,
+  required this.aw,
+  required this.ah,
   });
 
   @override
   Widget build(BuildContext context) {
-    // const Color tcc=Color(0xffffffff);
+    // const Color tcc=Color(0xFFFFFFFF);
     // const Color bcc=Color(0xFF000000);
-    final Color tcc=Color(int.parse(tc));
-     final Color bcc=Color(int.parse(bc));
+    // final Color tcc=Color(int.parse(tc));
+    //  final Color bcc=Color(int.parse(bc));
     return Scaffold(
       appBar: AppBar(title: const Text('')),
       body:Column(
@@ -47,22 +52,36 @@ class Button extends StatelessWidget {
                         )
                       ),
                     onPressed: (){},
-                    child:te=='Button1'?Tooltip(
-                      waitDuration:const Duration(seconds: 1),
-                      showDuration: const Duration(seconds: 5),
-                      padding: EdgeInsets.all(p),
-                      height: 45,
-                      textStyle: TextStyle(  
-                        fontSize: ts, color: tcc, fontWeight: FontWeight.normal),
-                      decoration: BoxDecoration(  
-                        borderRadius: BorderRadius.circular(cr), color:Colors.black),
-                      message:tt,
-                      child: Text('Button1',
-                              style: GoogleFonts.barlow(
-                              ),
-                              ),
+                    child:te=='Button1'?
+                    ToolTipWithArrow(
+                       te: te,
+                       message: tt,
+                       arrowWidth:aw,
+                       arrowHeight:ah,
+                       tooltipWidth:tw,
+                       p: p,
+                       tc: tc,
+                       bc: bc,
+                       cr: cr,
+                       ts: ts,
+                     )
+                    // Tooltip(
+                    //   waitDuration:const Duration(seconds: 1),
+                    //   showDuration: const Duration(seconds: 5),
+                    //   padding: EdgeInsets.all(p),
+                    //   height: 45,
+                    //   textStyle: TextStyle(  
+                    //     fontSize: ts, color: tcc, fontWeight: FontWeight.normal),
+                    //   decoration: BoxDecoration(  
+                    //     borderRadius: BorderRadius.circular(cr), color:bcc),
+                    //   message:tt,
+                    //   child: Text('Button1',
+                    //           style: GoogleFonts.barlow(
+                    //           ),
+                    //           ),
                       
-                    ):const Text(''),
+                    // )
+                    :const Text(''),
                   ),
                 ),
               ),
@@ -82,21 +101,33 @@ class Button extends StatelessWidget {
                     onPressed: (){},
                     child:
                     te=='Button2'? 
-                    Tooltip(
-                      waitDuration:const Duration(seconds: 1),
-                      showDuration: const Duration(seconds: 5),
-                      padding: EdgeInsets.all(p),
-                      height: 35,
-                      textStyle: TextStyle(  
-                        fontSize: ts, color: tcc, fontWeight: FontWeight.normal),
-                      decoration: BoxDecoration(  
-                        borderRadius: BorderRadius.circular(cr), color: bcc),
-                      message: tt,
-                      child: Text('Button2',
-                              style: GoogleFonts.barlow(
-                              ),
-                              ),
-                    )
+                    // Tooltip(
+                    //   waitDuration:const Duration(seconds: 1),
+                    //   showDuration: const Duration(seconds: 5),
+                    //   padding: EdgeInsets.all(p),
+                    //   height: 35,
+                    //   textStyle: TextStyle(  
+                    //     fontSize: ts, color: tcc, fontWeight: FontWeight.normal),
+                    //   decoration: BoxDecoration(  
+                    //     borderRadius: BorderRadius.circular(cr), color: bcc),
+                    //   message: tt,
+                    //   child: Text('Button2',
+                    //           style: GoogleFonts.barlow(
+                    //           ),
+                    //           ),
+                    // )
+                    ToolTipWithArrow(
+                      te: te,
+                       message: tt,
+                       arrowWidth:aw,
+                       arrowHeight:ah,
+                       tooltipWidth:tw,
+                       p: p,
+                       tc: tc,
+                       bc: bc,
+                       cr: cr,
+                       ts: ts,
+                     )
                     :const Text(''),
                   ),
                 ),
@@ -117,21 +148,35 @@ class Button extends StatelessWidget {
                       )
                     ),
                     onPressed: (){},
-                    child:te=='Button3'?Tooltip(
-                      waitDuration:const Duration(seconds: 1),
-                      showDuration: const Duration(seconds: 5),
-                      padding: EdgeInsets.all(p),
-                      height: 35,
-                      textStyle: TextStyle(  
-                        fontSize: ts, color:tcc, fontWeight: FontWeight.normal),
-                      decoration: BoxDecoration(  
-                        borderRadius: BorderRadius.circular(cr), color:bcc),
-                      message: tt,
-                      child: Text('Button3',
-                              style: GoogleFonts.barlow(
-                              ),
-                              ),
-                    ):const Text(''),
+                    child:te=='Button3'?
+                    // Tooltip(
+                    //   waitDuration:const Duration(seconds: 1),
+                    //   showDuration: const Duration(seconds: 5),
+                    //   padding: EdgeInsets.all(p),
+                    //   height: 35,
+                    //   textStyle: TextStyle(  
+                    //     fontSize: ts, color:tcc, fontWeight: FontWeight.normal),
+                    //   decoration: BoxDecoration(  
+                    //     borderRadius: BorderRadius.circular(cr), color:bcc),
+                    //   message: tt,
+                    //   child: Text('Button3',
+                    //           style: GoogleFonts.barlow(
+                    //           ),
+                    //           ),
+                    // )
+                    ToolTipWithArrow(
+                      te: te,
+                       message: tt,
+                       arrowWidth:aw,
+                       arrowHeight:ah,
+                       tooltipWidth:tw,
+                       p: p,
+                       tc: tc,
+                       bc: bc,
+                       cr: cr,
+                       ts: ts,
+                     )
+                    :const Text(''),
                   ),
                              ),
                ),
@@ -151,21 +196,35 @@ class Button extends StatelessWidget {
                           )
                         ),
                         onPressed: (){},
-                        child:te=='Button4'?Tooltip(
-                          waitDuration:const Duration(seconds: 1),
-                          showDuration: const Duration(seconds: 5),
-                          padding: EdgeInsets.all(p),
-                          height: 35,
-                          textStyle: TextStyle(  
-                        fontSize: ts, color: tcc, fontWeight: FontWeight.normal),
-                          decoration: BoxDecoration(  
-                        borderRadius: BorderRadius.circular(cr), color: bcc),
-                          message:tt,
-                          child: Text('Button4',
-                                  style: GoogleFonts.barlow(
-                                  ),
-                                  ),
-                        ):const Text(''),
+                        child:te=='Button4'?
+                        // Tooltip(
+                        //   waitDuration:const Duration(seconds: 1),
+                        //   showDuration: const Duration(seconds: 5),
+                        //   padding: EdgeInsets.all(p),
+                        //   height: 35,
+                        //   textStyle: TextStyle(  
+                        // fontSize: ts, color: tcc, fontWeight: FontWeight.normal),
+                        //   decoration: BoxDecoration(  
+                        // borderRadius: BorderRadius.circular(cr), color: bcc),
+                        //   message:tt,
+                        //   child: Text('Button4',
+                        //           style: GoogleFonts.barlow(
+                        //           ),
+                        //           ),
+                        // )
+                        ToolTipWithArrow(
+                          te: te,
+                       message: tt,
+                       arrowWidth:aw,
+                       arrowHeight:ah,
+                       tooltipWidth:tw,
+                       p: p,
+                       tc: tc,
+                       bc: bc,
+                       cr: cr,
+                       ts: ts,
+                     )
+                        :const Text(''),
                       ),
                                  ),
                    ),     
@@ -183,21 +242,35 @@ class Button extends StatelessWidget {
                           )
                         ),
                         onPressed: (){},
-                        child:te=='Button5'?Tooltip(
-                          waitDuration:const Duration(seconds: 1),
-                          showDuration: const Duration(seconds: 5),
-                          padding: EdgeInsets.all(p),
-                          height: 35,
-                          textStyle: TextStyle(  
-                        fontSize: ts, color: tcc, fontWeight: FontWeight.normal),
-                          decoration: BoxDecoration(  
-                        borderRadius: BorderRadius.circular(cr), color:bcc),
-                          message:tt,
-                          child: Text('Button5',
-                                  style: GoogleFonts.barlow(
-                                  ),
-                                  ),
-                        ):const Text(''),
+                        child:te=='Button5'?
+                        // Tooltip(
+                        //   waitDuration:const Duration(seconds: 1),
+                        //   showDuration: const Duration(seconds: 5),
+                        //   padding: EdgeInsets.all(p),
+                        //   height: 35,
+                        //   textStyle: TextStyle(  
+                        // fontSize: ts, color: tcc, fontWeight: FontWeight.normal),
+                        //   decoration: BoxDecoration(  
+                        // borderRadius: BorderRadius.circular(cr), color:bcc),
+                        //   message:tt,
+                        //   child: Text('Button5',
+                        //           style: GoogleFonts.barlow(
+                        //           ),
+                        //           ),
+                        // )
+                        ToolTipWithArrow(
+                          te: te,
+                       message: tt,
+                       arrowWidth:aw,
+                       arrowHeight:ah,
+                       tooltipWidth:tw,
+                       p: p,
+                       tc: tc,
+                       bc: bc,
+                       cr: cr,
+                       ts: ts,
+                     )
+                        :const Text(''),
                       ),
                                  ),
                    ),
