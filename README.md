@@ -1,16 +1,40 @@
-# tooltip
+# Tooltip
+A custom built flutter tooltip for buttons.
 
-A new Flutter project.
+### Built With
 
-## Getting Started
+* ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter)
+* ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* Flutter SDK
+* Android emulator with API level>=33.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. Clone the repo.
+   
+   ```sh
+   git clone https://github.com/RinzlerN26/AyurCatal.git
+   ```
+2. Run pub get.
+   
+   ```sh
+   flutter pub get
+   ```
+   
+3. Run the app.
+   ```sh
+   flutter run
+   ```
+
+
+
+
+
+
+
+
+
